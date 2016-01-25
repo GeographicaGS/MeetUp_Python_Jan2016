@@ -10,14 +10,23 @@ Slides (PDF): ------
 
 Examples (jupyter notebooks and more...):  
 1. Introduction.
+
 2. Coordinate Reference System: Pyproj.
+
     - [Projections notebook](http://nbviewer.jupyter.org/github/GeographicaGS/MeetUp_Python_Jan2016/blob/master/code/pyproj_examples.ipynb)
+
     - [Geodesic notebook](http://nbviewer.jupyter.org/github/GeographicaGS/MeetUp_Python_Jan2016/blob/master/code/geodesic_lines_examples.ipynb)
+
 3. Handling data sources: GDAL, Rasterio and Fiona.
+
 4. Spatial analysis (raster and vector): GDAL, GEOS, Numpy, Rasterio and Shapely.
+
     - [Workshop raster notebooks](https://github.com/GeographicaGS/workshop_Raster_GIS_data)
+
     - [Shapely notebooks](http://nbviewer.jupyter.org/github/GeographicaGS/MeetUp_Python_Jan2016/blob/master/code/shapely_numpy_examples.ipynb)
+
 5. Rendering outputs: Mapnik.
+
     - [Equidna](https://github.com/GeographicaGS/Equidna)
 
 
