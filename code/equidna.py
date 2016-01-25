@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from equidna import Equidna
+from Equidna.equidna.equidna import Equidna
 
 metadata = {
 	"bounds" : "-180,-80,179.9,80",
@@ -29,7 +29,8 @@ metadata = {
 	"attribution" : "",
 	"template" : "",
 	"version" : "1.0.0",
-	"format"  : "png"
+	"format"  : "png",
+	"compression": True
 }
 
 mapnik_xml = 'decmap.xml'
