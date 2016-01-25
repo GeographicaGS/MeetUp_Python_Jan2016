@@ -6,7 +6,7 @@ Python Sevilla Group WorkShop:
 at Geographica (http://www.geographica.gs)
 
 ## Contents
-Slides (PDF): ------
+Slides (PDF): [document_link](doc/Meetup_GeoPython_jan2016.pdf)
 
 Examples (jupyter notebooks and more...):
 
