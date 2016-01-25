@@ -8,7 +8,8 @@ at Geographica (http://www.geographica.gs)
 ## Contents
 Slides (PDF): ------
 
-Examples (jupyter notebooks and more...):  
+Examples (jupyter notebooks and more...):
+
 1. Introduction.
 
 2. Coordinate Reference System: Pyproj.
