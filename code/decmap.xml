@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map background-color="transparent" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85,180,85</Parameter>
+  <Parameter name="center">0,0,2</Parameter>
+  <Parameter name="format">jpeg</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">5</Parameter>
+  <Parameter name="name">world_dem_map</Parameter>
+  <Parameter name="description">Magnetic Declination World Map</Parameter>
+  <Parameter name="attribution">Geographica</Parameter>
+</Parameters>
+
+<Style name="world_style">
+        <Rule>
+            <LineSymbolizer stroke="#4D4D4D" stroke-width="0.7" />
+        </Rule>
+</Style>
+
+<Style name="world_graticules_20_style">
+        <Rule>
+            <LineSymbolizer stroke="#aaaa50" stroke-width="0.7" />
+        </Rule>
+</Style>
+
+<Style filter-mode="first" name="dec_map_rst_style">
+  <Rule>
+    <RasterSymbolizer>
+      <RasterColorizer default-color="transparent" default-mode="linear" epsilon="0.001">
+        <stop color="rgb(215,25,28)" value="-180" />
+
+        <stop color="rgb(240,124,74)" value="-40" />
+
+        <stop color="rgb(253,201,128)" value="-20" />
+
+        <stop color="rgb(255,255,191)" value="0" />
+
+        <stop color="rgb(199,232,173)" value="20" />
+
+        <stop color="rgb(128,191,171)" value="40" />
+
+        <stop color="rgb(43,131,186)" value="180" />
+      </RasterColorizer>
+    </RasterSymbolizer>
+  </Rule>
+</Style>
+
+<Style filter-mode="first" name="dec_map_vect_style">
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <LineSymbolizer stroke="#7F7F7F" stroke-width="0.5" />
+    <TextSymbolizer allow-overlap="true" clip="false" comp-op="src" face-name="DejaVu Sans Book" fill="#464646" halo-fill="#FFFFFF" halo-radius="0.5" placement="line" size="20">[dec]</TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <LineSymbolizer stroke="#7F7F7F" stroke-width="0.5" />
+    <TextSymbolizer allow-overlap="true" clip="false" comp-op="src" face-name="DejaVu Sans Book" fill="#464646" halo-fill="#FFFFFF" halo-radius="0.5" placement="line" size="18">[dec]</TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke="#7F7F7F" stroke-width="0.5" />
+    <TextSymbolizer allow-overlap="true" clip="false" comp-op="src" face-name="DejaVu Sans Book" fill="#464646" halo-fill="#FFFFFF" halo-radius="0.5" placement="line" size="17">[dec]</TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke="#7F7F7F" stroke-width="0.5" />
+    <TextSymbolizer allow-overlap="true" clip="false" comp-op="src" face-name="DejaVu Sans Book" fill="#464646" halo-fill="#FFFFFF" halo-radius="0.5" placement="line" size="15">[dec]</TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke="#7F7F7F" stroke-width="0.5" />
+    <TextSymbolizer allow-overlap="true" clip="false" comp-op="src" face-name="DejaVu Sans Book" fill="#464646" halo-fill="#FFFFFF" halo-radius="0.5" placement="line" size="15">[dec]</TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <LineSymbolizer stroke="#7F7F7F" stroke-width="0.5" />
+    <TextSymbolizer allow-overlap="true" clip="false" comp-op="src" face-name="DejaVu Sans Book" fill="#464646" halo-fill="#FFFFFF" halo-radius="0.5" placement="line" size="12">[dec]</TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <LineSymbolizer stroke="#7F7F7F" stroke-width="0.5" />
+    <TextSymbolizer allow-overlap="true" clip="false" comp-op="src" face-name="DejaVu Sans Book" fill="#464646" halo-fill="#FFFFFF" halo-radius="0.5" placement="line" size="0">[dec]</TextSymbolizer>
+  </Rule>
+</Style>
+
+
+<!-- LAYERS -->
+<Layer name="dec_map_rst" srs="+proj=longlat +datum=WGS84 +no_defs">
+    <StyleName>dec_map_rst_style</StyleName>
+    <Datasource>
+       <Parameter name="file">data/decmaps_testworld/dec_world.tif</Parameter>
+       <Parameter name="type">gdal</Parameter>
+       <Parameter name="band">1</Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="world" srs="+proj=longlat +datum=WGS84 +no_defs">
+        <StyleName>world_style</StyleName>
+        <Datasource>
+            <Parameter name="type">shape</Parameter>
+            <Parameter name="file">data/natearth/ne_110m_coastline.shp</Parameter>
+        </Datasource>
+</Layer>
+
+<Layer name="dec_map_vect" srs="+proj=longlat +datum=WGS84 +no_defs">
+    <StyleName>dec_map_vect_style</StyleName>
+    <Datasource>
+       <Parameter name="file">data/decmaps_testworld/dec_contours_world.shp</Parameter>
+       <Parameter name="type">shape</Parameter>
+       <Parameter name="layer_by_index">0</Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="world_graticules_20" srs="+proj=longlat +datum=WGS84 +no_defs">
+        <StyleName>world_graticules_20_style</StyleName>
+        <Datasource>
+            <Parameter name="type">shape</Parameter>
+            <Parameter name="file">data/natearth/ne_110m_graticules_20.shp</Parameter>
+        </Datasource>
+</Layer>
+
+</Map>
