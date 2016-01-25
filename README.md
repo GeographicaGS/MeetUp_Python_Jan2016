@@ -16,7 +16,7 @@ Examples (jupyter notebooks and more...):
 
     - [Projections notebook](http://nbviewer.jupyter.org/github/GeographicaGS/MeetUp_Python_Jan2016/blob/master/code/notebooks/pyproj_examples.ipynb)
 
-    - [Geodesic notebook](http://nbviewer.jupyter.org/github/GeographicaGS/MeetUp_Python_Jan2016/blob/master/code/notebooks/geodesic_lines_examples.ipynb)
+    - [GeodesicLines notebook](http://nbviewer.jupyter.org/github/GeographicaGS/MeetUp_Python_Jan2016/blob/master/code/notebooks/geodesic_lines_examples.ipynb)
 
 3. Handling data sources: GDAL, Rasterio and Fiona.
 
@@ -25,6 +25,8 @@ Examples (jupyter notebooks and more...):
     - [Workshop raster notebooks](https://github.com/GeographicaGS/workshop_Raster_GIS_data)
 
     - [Shapely notebooks](http://nbviewer.jupyter.org/github/GeographicaGS/MeetUp_Python_Jan2016/blob/master/code/notebooks/shapely_numpy_examples.ipynb)
+
+    - [Geosmoothing - Numpy, Scipy, Shapely and Fiona](https://github.com/GeographicaGS/GeoSmoothing)
 
 5. Rendering outputs: Mapnik.
 
